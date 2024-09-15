@@ -1,93 +1,168 @@
+/* General Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
+    font-family: 'Fredoka One', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header Styles */
+#main-header {
+    background-color: rgba(0, 0, 0, 0.776); 
+    color: yellow;
+    padding: 10px 10px;
+    text-align: center;
 }
 
 #logo {
-    margin: 0px;
-    padding: 8px;
-    font-family: "Fredoka One",sans-serif;
-    /* box-shadow: 10px 10px 15px 5px black; */
-    width: 16%;
-    border-radius: 20%;
+    font-size: 2.5em;
+    margin: 0;
 }
 
-ul{
-    margin: 0px;
-}
-
-body > header{
-    background-color: rgb(255, 179, 0);
-    color: rgb(255, 220, 196);
+nav ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    height: 12vh;
-    align-items: center;
-    justify-content:space-around;
+    justify-content: center;
+    gap: 20px;
 }
 
-#nav-ul{
-    display: flex;
+nav ul li {
+    display: inline;
 }
 
-#nav-ul > li{
-    padding: 8px;
-    margin: 16px;
-
-}
-
-body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
-}
-
-.navbutton{
+.navbutton {
     color: white;
     text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
+    font-size: 1.2em;
 }
 
-body > main article{
-    width: 70%;
-    margin: auto;
+.navbutton:hover {
+    text-decoration: underline;
 }
 
-#main-content{
-    display: flex;
-    justify-content: space-around;
+/* Main Content Styles */
+#main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#main-content > div{
-   width: 80%;
+h2 {
+    color: rgba(0, 0, 0, 0.776);
 }
 
-form{
+.menu-item, .chef-profile {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.menu-item img, .chef-profile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.menu-item h3, .chef-profile h3 {
+    margin-top: 10px;
+}
+
+img {
+    width: 300px; 
+    height: auto; 
+  }
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color:black;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
+    margin-top: 20px;
 }
 
-h2{
-    text-align: center;
+footer h2 {
+    color: yellow; /* Change "UniChef" text color to yellow */
 }
 
-body > footer{
-    background-color: rgb(255, 179, 0);
+#footer-ul {
     display: flex;
-}
-
-img{
-    border-radius: 100%;
-}
-
-#footer-ul{
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    list-style: none;
+    justify-content: center;
+    gap: 50px;
 }
-#footer-ul > div >li{
+
+#footer-ul li {
     margin-left: 15px;
 }
 
-#footer-ul > div > li > a{
+#footer-ul a {
     color: white;
     text-decoration: none;
+}
+
+#footer-ul a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-item, .chef-profile {
+        text-align: center;
+    }
+
+    #footer-ul {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
